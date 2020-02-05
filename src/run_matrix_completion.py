@@ -41,6 +41,8 @@ def main():
                         help="File containing pre-computed typological distances between languages")
     parser.add_argument("--largest_source", action='store_true',
                         help="Always choose the source language with the largest number of examples for transfer")
+    parser.add_argument("--model_averaging", action='store_true',
+                        help="Predict through model averaging rather than pluggin in the mean")
 
     # Experiment
     parser.add_argument("--model_name_or_path", default="bert-base-multilingual-cased", type=str,
